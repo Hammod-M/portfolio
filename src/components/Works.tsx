@@ -32,70 +32,70 @@ export default function Works() {
   ];
   const WebDevelopmentServices = [
     {
-      id: 1,
+      id: "bizan",
       title: "Управленческая отчётность для бизнеса",
       date: "2d ago",
       img: "../assets/img/works/html-code/bizan.png",
       link: "https://portfolio.hmlanding.ru/bizan/index.html",
     },
     {
-      id: 2,
+      id: "charismastom",
       title: "Стоматологическая клиника",
       date: "4d ago",
       img: "../assets/img/works/html-code/charismastom.png",
       link: "https://charismastom.ru/",
     },
     {
-      id: 14,
+      id: "dm",
       title: "Немецкая косметика с доставкой по РФ",
       date: "4d ago",
       img: "../assets/img/works/html-code/dm.png",
       link: "https://portfolio.hmlanding.ru/dm/",
     },
     {
-      id: 3,
+      id: "krivenkina",
       title: "Мастерская психологического консультирования",
       date: "4d ago",
       img: "../assets/img/works/html-code/krivenkina.png",
       link: "https://portfolio.hmlanding.ru/krivenkina/",
     },
     {
-      id: 4,
+      id: "aie",
       title: "Полный VIP комплект оборудования для квартиры",
       date: "4d ago",
       img: "../assets/img/works/html-code/aie.png",
       link: "https://portfolio.hmlanding.ru/aie/",
     },
     {
-      id: 5,
+      id: "bmw",
       title: "Продажа и ремонт двигателей BMW",
       date: "4d ago",
       img: "../assets/img/works/html-code/bmw.png",
       link: "https://portfolio.hmlanding.ru/bmw/",
     },
     {
-      id: 6,
+      id: "idanalytics",
       title: "Точный и подробный анализ продаж на маркетплейсах",
       date: "4d ago",
       img: "../assets/img/works/html-code/idanalytics.png",
       link: "https://portfolio.hmlanding.ru/idanalytics/",
     },
     {
-      id: 7,
+      id: "gorbunov",
       title: "Арбитражный управляющий Горбунов Вадим Валерьевич",
       date: "4d ago",
       img: "../assets/img/works/html-code/gorbunov.png",
       link: "https://portfolio.hmlanding.ru/gorbunov/",
     },
     {
-      id: 8,
+      id: "expo",
       title: "Международный форум по маркетингу и менеджменту",
       date: "4d ago",
       img: "../assets/img/works/html-code/expo.png",
       link: "https://portfolio.hmlanding.ru/EXPO",
     },
     {
-      id: 9,
+      id: "alartech",
       title: "Сервисное обслуживание грузоподъемного оборудования",
       date: "4d ago",
       img: "../assets/img/works/html-code/alartech.png",
@@ -109,7 +109,7 @@ export default function Works() {
       link: "https://portfolio.hmlanding.ru/floor/",
     },
     {
-      id: 11,
+      id: "id-lk",
       title: "Рейтинг брендов (LK)",
       date: "4d ago",
       img: "../assets/img/works/html-code/id-lk.png",
@@ -123,11 +123,18 @@ export default function Works() {
       link: "https://portfolio.hmlanding.ru/quiz",
     },
     {
-      id: 13,
+      id: "ZonaComforta",
       title: "Зона Комфорта",
       date: "4d ago",
       img: "../assets/img/works/html-code/ZonaComforta.png",
       link: "https://portfolio.hmlanding.ru/ZonaComforta/",
+    },
+    {
+      id: "coach",
+      title: "Коуч личной эффективности, психолог",
+      date: "4d ago",
+      img: "../assets/img/works/html-code/coach.png",
+      link: "https://portfolio.hmlanding.ru/coach/",
     },
   ];
   const designWork = [
@@ -169,7 +176,7 @@ export default function Works() {
                 React
               </h4>
 
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
                 {reactWork.map((work) => (
                   <div className="works__item" key={work.id}>
                     <a
@@ -199,7 +206,7 @@ export default function Works() {
                 Web Development Services
               </h4>
 
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
                 {WebDevelopmentServices.map((work) => (
                   <div className="works__item" key={work.id}>
                     <a

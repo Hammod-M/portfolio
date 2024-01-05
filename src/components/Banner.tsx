@@ -3,7 +3,7 @@ export default function Banner() {
   return (
     <section className="banner pt-3 ">
       <div className="container mx-auto">
-        <div className="banner__block w-6/12 pb-8 flex items-center gap-16">
+        <div className="banner__block w-11/12 sm:w-6/12 pb-8 flex items-center gap-5 sm:gap-16 flex-col content-center justify-items-center mx-auto text-center lg:flex-row lg:text-left lg:mx-0">
           <img src={person} alt="person" className="w-48 h-48 rounded-full" />
 
           <div className="info">
@@ -13,7 +13,7 @@ export default function Banner() {
             <p className="mb-3">
               Web Engineer. Visionary Developer. Harmony Seeker.
             </p>
-            <div className="sotical gap-3 flex items-center">
+            <div className="sotical gap-3 flex flex-col sm:flex-row items-center ">
               <div className="git flex items-center">
                 <a
                   href="https://github.com/Hammod-M"

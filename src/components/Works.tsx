@@ -40,6 +40,13 @@ export default function Works() {
     },
     {
       id: 2,
+      title: "Стоматологическая клиника",
+      date: "4d ago",
+      img: "../assets/img/works/html-code/charismastom.png",
+      link: "https://charismastom.ru/",
+    },
+    {
+      id: 14,
       title: "Немецкая косметика с доставкой по РФ",
       date: "4d ago",
       img: "../assets/img/works/html-code/dm.png",
@@ -139,7 +146,7 @@ export default function Works() {
   ];
 
   return (
-    <section className="works mb-10">
+    <section id="projects" className="works mb-10">
       <div className="container mx-auto">
         {/* search */}
         {/* filtr */}

@@ -1,7 +1,4 @@
-import { useRef } from "react";
-
 export default function Header() {
-  const scrollToRef = useRef<HTMLDivElement>(null)
   return (
     <header className="header">
       <div className="container mx-auto">
@@ -19,12 +16,18 @@ export default function Header() {
                 </a>
               </li>
               <li className="list-none">
-                <a href="#" className="no-underline text-lg text-black-200">
+                <a
+                  href="#projects"
+                  className="no-underline text-lg text-black-200"
+                >
                   Projects
                 </a>
               </li>
               <li className="list-none">
-                <a href="#" className="no-underline text-lg text-black-200">
+                <a
+                  href="#reviews"
+                  className="no-underline text-lg text-black-200"
+                >
                   Reviews
                 </a>
               </li>

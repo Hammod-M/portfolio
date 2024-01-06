@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Tabs from "./components/Tabs";
 import Works from "./components/Works";
 import Reviews from "./components/Reviews";
+import About from "./components/About";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Banner />
         {/* <Tabs /> */}
         <Works />
+        <About />
         <Reviews />
       </div>
     </div>

@@ -11,16 +11,19 @@ export default function Header() {
           <div className="nav">
             <div className="menu flex gap-3">
               <li className="list-none">
-                <a href="#" className="no-underline text-lg text-black-200">
-                  About
-                </a>
-              </li>
-              <li className="list-none">
                 <a
                   href="#projects"
                   className="no-underline text-lg text-black-200"
                 >
                   Projects
+                </a>
+              </li>
+              <li className="list-none">
+                <a
+                  href="#about"
+                  className="no-underline text-lg text-black-200"
+                >
+                  About
                 </a>
               </li>
               <li className="list-none">

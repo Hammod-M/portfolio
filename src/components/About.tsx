@@ -8,8 +8,8 @@ export default function About() {
         <div className="mx-auto text-center md:max-w-xl lg:max-w-3xl">
           <p className="text-neutral-700 dark:text-neutral-300 ">
             My journey into the world of web development began in the realm of
-            freelancing, where I spent over a year bringing various projects to
-            life, including e-commerce platforms, corporate portals, CRM
+            freelancing, where I spent over two year bringing various projects
+            to life, including e-commerce platforms, corporate portals, CRM
             systems, business card websites, and landing pages.
             <br />
             <br />

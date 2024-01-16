@@ -5,7 +5,7 @@ export default function Works() {
       title: "Piezza",
       date: "5h ago",
       img: "assets/img/works/react/piezza.jpg",
-      link: "https://hammod-m.github.io/react-piezza/",
+      link: "https://hammod-m.github.io/react-pizza/",
     },
     {
       id: 2,

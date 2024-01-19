@@ -2,7 +2,7 @@ export default function Works() {
   const reactWork = [
     {
       id: 1,
-      title: "Piezza",
+      title: "Pizza",
       date: "5h ago",
       img: "assets/img/works/react/piezza.jpg",
       link: "https://hammod-m.github.io/react-pizza/",

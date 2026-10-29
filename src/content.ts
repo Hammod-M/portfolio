@@ -79,11 +79,11 @@ const stacks = {
 type SkillWords = { responsive: string; go: string; bots: string; roles: string; review: string; llm: string; ai: string }
 
 const skillGroups = (names: string[], w: SkillWords) => [
-  { name: names[0], items: ['React', 'TypeScript', 'JavaScript (ES6+)', 'Next.js', 'Redux Toolkit', 'TanStack Query', 'Zustand', 'React Hook Form', 'Vite'] },
-  { name: names[1], items: ['Tailwind CSS', 'Ant Design', 'SCSS', w.responsive, 'i18n'] },
-  { name: names[2], items: ['Node.js', 'NestJS', w.go, 'REST', 'WebSocket', 'MQTT', w.bots] },
+  { name: names[0], items: ['React', 'TypeScript', 'JavaScript (ES6+)', 'Next.js', 'Redux Toolkit', 'TanStack Query', 'Zustand', 'React Hook Form', 'Vite', 'Webpack'] },
+  { name: names[1], items: ['Tailwind CSS', 'Ant Design', 'SCSS', 'Recharts', 'Figma', w.responsive, 'i18n'] },
+  { name: names[2], items: ['Node.js', 'NestJS', w.go, 'REST', 'GraphQL', 'WebSocket', 'MQTT', w.bots] },
   { name: names[3], items: ['PostgreSQL', 'Redis', 'BullMQ', 'MongoDB', 'JWT', w.roles] },
-  { name: names[4], items: ['Vitest', 'Playwright', 'GitHub Actions', 'Docker', 'Linux', 'Prometheus', 'Sentry'] },
+  { name: names[4], items: ['Jest', 'React Testing Library', 'Vitest', 'Playwright', 'Git', 'GitHub Actions', 'Docker', 'Linux', 'Prometheus', 'Sentry'] },
   { name: names[5], items: [w.ai, w.llm, w.review, 'Scrum'] },
 ]
 
@@ -91,7 +91,7 @@ export const content = {
   en: {
     meta: {
       title: 'Hammod Muborakshoi — Frontend / Fullstack Developer',
-      description: 'Frontend / Fullstack developer from Tashkent: React, TypeScript, Node.js, Go. 5+ years in web development, ex-Frontend Lead Developer at Tischerco (Germany), now at Polyframe AI.',
+      description: 'Frontend / Fullstack developer from Tashkent: React, TypeScript, Node.js, Go. 6+ years in web development, ex-Frontend Lead Developer at Tischerco (Germany), now at Polyframe AI.',
     },
     nav: { experience: 'Experience', projects: 'Projects', skills: 'Skills', contact: 'Contact' },
     ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Русская версия', downloadCv: 'Download CV', cvMenu: 'Choose a CV' },
@@ -104,7 +104,7 @@ export const content = {
       photoAlt: 'Portrait of Hammod Muborakshoi',
     },
     facts: [
-      { value: '5+ years', label: 'in web development: 50+ projects with my own team, then product companies' },
+      { value: '6+ years', label: 'in web development: 50+ projects with my own team, then product companies' },
       { value: '30+', label: 'screens in a German B2B platform whose frontend I built from scratch' },
       { value: 's → ms', label: 'live video-analytics view sped up from seconds to milliseconds' },
       { value: '1,900+', label: 'automated tests in my own product, run in CI' },
@@ -119,8 +119,8 @@ export const content = {
           context: 'AI video analytics for retail and offices (startup) · Tashkent',
           points: [
             'Develop the web UI on React 19, TypeScript, TanStack Query, Zustand and Tailwind: live zone occupancy, staff attendance, alerts and reports.',
-            'Built a zone editor on top of the camera frame (draggable polygon vertices, undo, snapping), an entrance-line editor and playback of annotated video clips (HLS).',
-            'Fixed a mismatch between the live screen and alerts (10 vs 13 people at the same moment) by removing a duplicate SQL calculation; query time fell from 2.2 s to ~10 ms on the test stand.',
+            'Made camera-frame zones editable (draggable polygon vertices, undo, snapping), added an entrance-line editor and worked on playback of annotated video clips.',
+            'Fixed a mismatch between the live screen and alerts (10 people on screen, 13 in the alert) by removing a duplicate SQL calculation; query time fell from 2.2 s to ~10 ms on the test stand.',
             'Took part in an audit of 225 analytics blocks and fixed metric bugs; in Go: Telegram alerts within API rate limits, scheduled PDF reports, server health monitoring.',
           ],
           stack: stacks.polyframe,
@@ -257,7 +257,7 @@ export const content = {
   ru: {
     meta: {
       title: 'Хаммод Муборакшои — Frontend / Fullstack-разработчик',
-      description: 'Frontend / Fullstack-разработчик из Ташкента: React, TypeScript, Node.js, Go. 5+ лет в веб-разработке, был Frontend Lead Developer в Tischerco (Германия), сейчас в Polyframe AI.',
+      description: 'Frontend / Fullstack-разработчик из Ташкента: React, TypeScript, Node.js, Go. 6+ лет в веб-разработке, был Frontend Lead Developer в Tischerco (Германия), сейчас в Polyframe AI.',
     },
     nav: { experience: 'Опыт', projects: 'Проекты', skills: 'Навыки', contact: 'Контакты' },
     ui: { skip: 'Перейти к содержимому', theme: 'Сменить тему', language: 'English version', downloadCv: 'Скачать резюме', cvMenu: 'Выберите резюме' },
@@ -270,7 +270,7 @@ export const content = {
       photoAlt: 'Фото Хаммода Муборакшои',
     },
     facts: [
-      { value: '5+ лет', label: 'в веб-разработке: 50+ проектов со своей командой, затем продуктовые компании' },
+      { value: '6+ лет', label: 'в веб-разработке: 50+ проектов со своей командой, затем продуктовые компании' },
       { value: '30+', label: 'экранов в B2B-платформе для немецкой компании — её фронтенд я сделал с нуля' },
       { value: 'сек → мс', label: 'так ускорил live-экран системы видеоаналитики' },
       { value: '1900+', label: 'автотестов в моём продукте, запускаются в CI' },
@@ -285,8 +285,8 @@ export const content = {
           context: 'AI-видеоаналитика для ритейла и офисов (стартап) · Ташкент',
           points: [
             'Развиваю веб-интерфейс на React 19, TypeScript, TanStack Query, Zustand и Tailwind: заполненность зон в реальном времени, посещаемость сотрудников, алерты и отчёты.',
-            'Разработал редактор зон прямо на кадре с камеры (полигоны с перетаскиванием вершин, отменой и привязкой), редактор линии входа и просмотр размеченных видеоклипов (HLS).',
-            'Устранил расхождение между live-экраном и алертами (10 vs 13 человек в один момент): убрал дублирующий расчёт в SQL; время запроса — с 2,2 с до ~10 мс на тестовом стенде.',
+            'Сделал зоны на кадре камеры редактируемыми (перетаскивание вершин, отмена, привязка), добавил редактор линии входа, доработал воспроизведение размеченных видеоклипов.',
+            'Устранил расхождение между live-экраном и алертами (на экране 10 человек, в алерте 13): убрал дублирующий расчёт в SQL; время запроса — с 2,2 с до ~10 мс на тестовом стенде.',
             'Участвовал в аудите 225 блоков аналитики и исправил ошибки расчёта метрик; на Go — алерты в Telegram с учётом лимитов API, PDF-отчёты по расписанию, мониторинг серверов.',
           ],
           stack: stacks.polyframe,

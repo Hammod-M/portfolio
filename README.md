@@ -1,4 +1,4 @@
-# Portfolio — Hammod Muboraksho
+# Portfolio — Hammod Muborakshoi
 
 Personal site of a frontend / fullstack developer (React, TypeScript, Node.js, Go).
 

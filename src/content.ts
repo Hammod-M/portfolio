@@ -18,7 +18,7 @@ export const LINKS = {
   github: 'https://github.com/Hammod-M',
 }
 
-const cvPath = (name: string) => `${import.meta.env.BASE_URL}cv/Hammod_Muboraksho_${name}.pdf`
+const cvPath = (name: string) => `${import.meta.env.BASE_URL}cv/Hammod_Muborakshoi_${name}.pdf`
 
 export const CV_FILES = {
   en: [
@@ -69,7 +69,7 @@ const stacks = {
   itsdone: ['React', 'TypeScript', 'Redux Toolkit', 'Ant Design', 'react-pdf', 'Google Maps API'],
 }
 
-type SkillWords = { responsive: string; go: string; bots: string; roles: string; review: string; llm: string }
+type SkillWords = { responsive: string; go: string; bots: string; roles: string; review: string; llm: string; ai: string }
 
 const skillGroups = (names: string[], w: SkillWords) => [
   { name: names[0], items: ['React', 'TypeScript', 'JavaScript (ES6+)', 'Next.js', 'Redux Toolkit', 'TanStack Query', 'Zustand', 'React Hook Form', 'Vite'] },
@@ -77,25 +77,25 @@ const skillGroups = (names: string[], w: SkillWords) => [
   { name: names[2], items: ['Node.js', 'NestJS', w.go, 'REST', 'WebSocket', 'MQTT', w.bots] },
   { name: names[3], items: ['PostgreSQL', 'Redis', 'BullMQ', 'MongoDB', 'JWT', w.roles] },
   { name: names[4], items: ['Vitest', 'Playwright', 'GitHub Actions', 'Docker', 'Linux', 'Prometheus', 'Sentry'] },
-  { name: names[5], items: ['Claude Code', w.llm, w.review, 'Scrum'] },
+  { name: names[5], items: [w.ai, w.llm, w.review, 'Scrum'] },
 ]
 
 export const content = {
   en: {
-    meta: { title: 'Hammod Muboraksho — Frontend / Fullstack Developer' },
+    meta: { title: 'Hammod Muborakshoi — Frontend / Fullstack Developer' },
     nav: { experience: 'Experience', projects: 'Projects', skills: 'Skills', contact: 'Contact' },
     ui: { theme: 'Toggle color theme', language: 'Русская версия', downloadCv: 'Download CV', cvMenu: 'Choose a CV' },
     hero: {
       hello: "Hi, I'm Hammod",
-      name: 'Hammod Muboraksho',
+      name: 'Hammod Muborakshoi',
       role: 'Frontend / Fullstack Developer',
       lead: 'I write interfaces in React and TypeScript and backends in Node.js and Go. I built the frontend of a German B2B platform from scratch, and now at Polyframe AI I work on the dashboard and backend of a video-analytics system for stores and offices.',
       badges: ['Tashkent · UTC+5', 'Russian · English B2', 'Open to remote, office or relocation'],
       telegram: 'Message on Telegram',
-      photoAlt: 'Portrait of Hammod Muboraksho',
+      photoAlt: 'Portrait of Hammod Muborakshoi',
     },
     facts: [
-      { value: '5+ years', label: 'in web development: 50+ freelance projects, then product teams' },
+      { value: '5+ years', label: 'in web development: 50+ projects with my own team, then product companies' },
       { value: '30+', label: 'screens in a German B2B platform whose frontend I built from scratch' },
       { value: 's → ms', label: 'live video-analytics view sped up from seconds to milliseconds' },
       { value: '1,900+', label: 'automated tests in my own product, run in CI' },
@@ -109,16 +109,16 @@ export const content = {
           dates: 'Apr 2026 – Present',
           context: 'AI video analytics for retail and offices (startup) · Tashkent',
           points: [
-            'Develop React/TypeScript dashboard features: live zone occupancy, staff attendance, alerts and reports.',
-            'Built a camera zone editor (drag handles, undo, snapping), an entrance-line editor and a system status page.',
-            'The dashboard and the alerts counted people differently; I moved both to one calculation, and the live view now loads in milliseconds instead of seconds.',
-            'In Go: Telegram alerts that respect rate limits and retry on failure, scheduled PDF reports, server health monitoring.',
+            'Develop the web UI on React 19, TypeScript, TanStack Query, Zustand and Tailwind: live zone occupancy, staff attendance, alerts and reports.',
+            'Built a zone editor on top of the camera frame (draggable polygon vertices, undo, snapping), an entrance-line editor and playback of annotated video clips (HLS).',
+            'Fixed a mismatch between the live screen and alerts (10 vs 13 people at the same moment) by removing a duplicate SQL calculation; query time fell from 2.2 s to ~10 ms on the test stand.',
+            'Took part in an audit of 225 analytics blocks and fixed metric bugs; in Go: Telegram alerts within API rate limits, scheduled PDF reports, server health monitoring.',
           ],
           stack: stacks.polyframe,
         },
         {
           company: 'Tischerco (Germany)',
-          role: 'Frontend Lead',
+          role: 'Frontend Lead Developer',
           dates: 'Apr 2024 – Dec 2025',
           context: '“It\'s Done” — B2B platform for service companies · remote',
           points: [
@@ -142,13 +142,14 @@ export const content = {
           stack: stacks.vakhid,
         },
         {
-          company: 'Freelance',
-          role: 'Web Developer',
+          company: 'HM-TECH',
+          role: 'Founder & Team Lead',
           dates: 'Apr 2020 – Nov 2022',
-          context: 'Websites and web apps for businesses',
+          context: 'Own web development team, up to 14 people: frontend, backend, design, QA, SEO',
           points: [
-            'Built 50+ websites and web apps: online stores, landing pages, corporate sites, admin panels.',
-            'Backend tasks on Node.js/NestJS: JWT/Passport auth, role-based access, file uploads, Telegram bots.',
+            'Built and led the team: staffing projects, estimates and specs, task planning, deadlines, code review, client communication.',
+            'Delivered 50+ projects: online stores, corporate websites, landing pages, admin panels.',
+            'Owned the frontend architecture and wrote the hardest parts myself: React SPAs, JWT/Passport auth, role-based access, Telegram bots.',
           ],
           stack: stacks.freelance,
         },
@@ -182,7 +183,7 @@ export const content = {
           stack: stacks.itsdone,
         },
       ] satisfies Project[],
-      galleryTitle: 'Selected freelance work, 2020–2022',
+      galleryTitle: 'Selected HM-TECH projects, 2020–2022',
       works: works([
         'Management reporting for business',
         'Dental clinic',
@@ -196,7 +197,7 @@ export const content = {
     skills: {
       title: 'Skills',
       groups: skillGroups(['Frontend', 'UI', 'Backend', 'Data & security', 'Quality & delivery', 'Way of working'], {
-        responsive: 'Responsive layout', go: 'Go (working knowledge)', bots: 'Telegram bots', roles: 'Role-based access', review: 'Code review', llm: 'LLM APIs (OpenRouter)',
+        responsive: 'Responsive layout', go: 'Go', bots: 'Telegram bots', roles: 'Role-based access', review: 'Code review', llm: 'LLM APIs (OpenRouter)', ai: 'AI-assisted development',
       }),
     },
     approach: {
@@ -204,7 +205,7 @@ export const content = {
       items: [
         { title: 'Business goal first', text: 'Before coding I find out why the task matters, split it into small releases and agree on the API with backend developers early.' },
         { title: 'TypeScript and tests', text: 'Strict TypeScript, Vitest and Playwright. When I fix a bug, I add a test so it does not come back.' },
-        { title: 'AI helps, I own the code', text: 'I use Claude Code every day, but I plan the change myself, read every diff and let CI checks catch mistakes.' },
+        { title: 'AI helps, I own the code', text: 'I use AI coding agents every day, but I plan the change myself, read every diff and let CI checks catch mistakes.' },
         { title: 'Thinking about production', text: 'Monitoring, alerts and an honest “no data” instead of a zero — users should never see a wrong number.' },
       ],
     },
@@ -216,20 +217,20 @@ export const content = {
     footer: 'Built with React, TypeScript, Vite and Tailwind CSS.',
   },
   ru: {
-    meta: { title: 'Хаммод Муборакшо — Frontend / Fullstack-разработчик' },
+    meta: { title: 'Хаммод Муборакшои — Frontend / Fullstack-разработчик' },
     nav: { experience: 'Опыт', projects: 'Проекты', skills: 'Навыки', contact: 'Контакты' },
     ui: { theme: 'Сменить тему', language: 'English version', downloadCv: 'Скачать резюме', cvMenu: 'Выберите резюме' },
     hero: {
       hello: 'Привет, я Хаммод',
-      name: 'Хаммод Муборакшо',
+      name: 'Хаммод Муборакшои',
       role: 'Frontend / Fullstack-разработчик',
       lead: 'Пишу интерфейсы на React и TypeScript, а бэкенд — на Node.js и Go. С нуля сделал фронтенд B2B-платформы для немецкой компании, сейчас в Polyframe AI работаю над дашбордом и бэкендом системы видеоаналитики для магазинов и офисов.',
       badges: ['Ташкент · UTC+5', 'Русский · English B2', 'Удалёнка, офис или переезд'],
       telegram: 'Написать в Telegram',
-      photoAlt: 'Фото Хаммода Муборакшо',
+      photoAlt: 'Фото Хаммода Муборакшои',
     },
     facts: [
-      { value: '5+ лет', label: 'в веб-разработке: 50+ проектов на фрилансе, потом продуктовые команды' },
+      { value: '5+ лет', label: 'в веб-разработке: 50+ проектов со своей командой, затем продуктовые компании' },
       { value: '30+', label: 'экранов в B2B-платформе для немецкой компании — её фронтенд я сделал с нуля' },
       { value: 'сек → мс', label: 'так ускорил live-экран системы видеоаналитики' },
       { value: '1900+', label: 'автотестов в моём продукте, запускаются в CI' },
@@ -243,16 +244,16 @@ export const content = {
           dates: 'Апр 2026 – наст. время',
           context: 'AI-видеоаналитика для ритейла и офисов (стартап) · Ташкент',
           points: [
-            'Развиваю дашборд на React и TypeScript: заполненность зон в реальном времени, посещаемость сотрудников, алерты и отчёты.',
-            'Сделал редактор зон прямо на кадре с камеры — с перетаскиванием вершин, отменой и привязкой, — а ещё редактор линии входа и страницу состояния системы.',
-            'Дашборд и алерты считали людей по-разному — свёл всё к одному расчёту, и live-экран стал открываться за миллисекунды вместо секунд.',
-            'На Go написал отправку алертов в Telegram с учётом лимитов и повторами, PDF-отчёты по расписанию и мониторинг состояния сервера.',
+            'Развиваю веб-интерфейс на React 19, TypeScript, TanStack Query, Zustand и Tailwind: заполненность зон в реальном времени, посещаемость сотрудников, алерты и отчёты.',
+            'Разработал редактор зон прямо на кадре с камеры (полигоны с перетаскиванием вершин, отменой и привязкой), редактор линии входа и просмотр размеченных видеоклипов (HLS).',
+            'Устранил расхождение между live-экраном и алертами (10 vs 13 человек в один момент): убрал дублирующий расчёт в SQL; время запроса — с 2,2 с до ~10 мс на тестовом стенде.',
+            'Участвовал в аудите 225 блоков аналитики и исправил ошибки расчёта метрик; на Go — алерты в Telegram с учётом лимитов API, PDF-отчёты по расписанию, мониторинг серверов.',
           ],
           stack: stacks.polyframe,
         },
         {
           company: 'Tischerco (Германия)',
-          role: 'Frontend Lead',
+          role: 'Frontend Lead Developer',
           dates: 'Апр 2024 – дек 2025',
           context: '«It\'s Done» — B2B-платформа для сервисных компаний · удалённо',
           points: [
@@ -276,13 +277,14 @@ export const content = {
           stack: stacks.vakhid,
         },
         {
-          company: 'Фриланс',
-          role: 'Веб-разработчик',
+          company: 'HM-TECH',
+          role: 'Основатель и тимлид',
           dates: 'Апр 2020 – ноя 2022',
-          context: 'Сайты и веб-приложения для бизнеса',
+          context: 'Собственная команда веб-разработки, до 14 человек: frontend, backend, дизайн, QA, SEO',
           points: [
-            'Сделал 50+ сайтов и веб-приложений: интернет-магазины, лендинги, корпоративные сайты, админ-панели.',
-            'Бэкенд на Node.js/NestJS: авторизация JWT/Passport, доступ по ролям, загрузка файлов, Telegram-боты.',
+            'Собрал и вёл команду: подбор людей под проекты, оценка и ТЗ, распределение задач, сроки, code review, общение с заказчиками.',
+            'Выполнили 50+ проектов: интернет-магазины, корпоративные сайты, лендинги, админ-панели.',
+            'Отвечал за архитектуру фронтенда и сам писал сложные части: SPA на React, авторизацию (JWT/Passport), ролевой доступ, Telegram-ботов.',
           ],
           stack: stacks.freelance,
         },
@@ -316,7 +318,7 @@ export const content = {
           stack: stacks.itsdone,
         },
       ] satisfies Project[],
-      galleryTitle: 'Избранные фриланс-проекты, 2020–2022',
+      galleryTitle: 'Избранные проекты HM-TECH, 2020–2022',
       works: works([
         'Управленческая отчётность для бизнеса',
         'Стоматологическая клиника',
@@ -330,7 +332,7 @@ export const content = {
     skills: {
       title: 'Навыки',
       groups: skillGroups(['Frontend', 'UI', 'Backend', 'Данные и безопасность', 'Качество и поставка', 'Как работаю'], {
-        responsive: 'Адаптивная вёрстка', go: 'Go (рабочий уровень)', bots: 'Telegram-боты', roles: 'Доступ по ролям', review: 'Code review', llm: 'LLM API (OpenRouter)',
+        responsive: 'Адаптивная вёрстка', go: 'Go', bots: 'Telegram-боты', roles: 'Доступ по ролям', review: 'Code review', llm: 'LLM API (OpenRouter)', ai: 'AI-инструменты разработки',
       }),
     },
     approach: {
@@ -338,7 +340,7 @@ export const content = {
       items: [
         { title: 'Сначала цель бизнеса', text: 'Прежде чем писать код, выясняю, зачем нужна задача, делю её на небольшие релизы и заранее договариваюсь с бэкендом об API.' },
         { title: 'TypeScript и тесты', text: 'Строгий TypeScript, Vitest и Playwright. Исправил баг — пишу на него тест, чтобы он не вернулся.' },
-        { title: 'AI помогает, отвечаю я', text: 'Каждый день работаю с Claude Code, но изменение планирую сам, читаю каждый diff, а ошибки ловят проверки в CI.' },
+        { title: 'AI помогает, отвечаю я', text: 'Каждый день работаю с AI-агентами, но изменение планирую сам, читаю каждый diff, а ошибки ловят проверки в CI.' },
         { title: 'Думаю о продакшене', text: 'Мониторинг, алерты и честное «нет данных» вместо нуля — пользователь не должен видеть неверную цифру.' },
       ],
     },

@@ -58,7 +58,7 @@ export default function Hero() {
                 key={badge}
                 className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300"
               >
-                {index === 1 && <Icon.Pin />}
+                {index === 0 && <Icon.Pin />}
                 {index === 2 && <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />}
                 {badge}
               </li>
@@ -98,7 +98,7 @@ export default function Hero() {
         {t.facts.map((fact) => (
           <div
             key={fact.label}
-            className="flex flex-col-reverse rounded-2xl border border-zinc-200 bg-white/70 p-5 dark:border-white/10 dark:bg-white/[0.03]"
+            className="flex flex-col-reverse justify-end rounded-2xl border border-zinc-200 bg-white/70 p-5 dark:border-white/10 dark:bg-white/[0.03]"
           >
             <dt className="mt-1 text-sm leading-snug text-zinc-600 dark:text-zinc-400">{fact.label}</dt>
             <dd className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">{fact.value}</dd>

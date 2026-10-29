@@ -89,16 +89,16 @@ export const content = {
       hello: "Hi, I'm Hammod",
       name: 'Hammod Muboraksho',
       role: 'Frontend / Fullstack Developer',
-      lead: "I build web products end to end — React and TypeScript on the front, Node.js and Go on the back. Right now I'm a Fullstack Engineer at Polyframe AI, an AI video-analytics startup.",
-      badges: ['5+ years in web development', 'Tashkent · UTC+5', 'Open to remote & relocation'],
+      lead: 'I write interfaces in React and TypeScript and backends in Node.js and Go. I built the frontend of a German B2B platform from scratch, and now at Polyframe AI I work on the dashboard and backend of a video-analytics system for stores and offices.',
+      badges: ['Tashkent · UTC+5', 'Russian · English B2', 'Open to remote, office or relocation'],
       telegram: 'Message on Telegram',
       photoAlt: 'Portrait of Hammod Muboraksho',
     },
     facts: [
-      { value: '30+', label: 'screens in a B2B web client I built from scratch' },
-      { value: '50+', label: 'websites and web apps for businesses' },
-      { value: '1,900+', label: 'unit tests in my own product' },
-      { value: '3', label: 'UI languages shipped: German, English, Russian' },
+      { value: '5+ years', label: 'in web development: 50+ freelance projects, then product teams' },
+      { value: '30+', label: 'screens in a German B2B platform whose frontend I built from scratch' },
+      { value: 's → ms', label: 'live video-analytics view sped up from seconds to milliseconds' },
+      { value: '1,900+', label: 'automated tests in my own product, run in CI' },
     ],
     experience: {
       title: 'Experience',
@@ -111,8 +111,8 @@ export const content = {
           points: [
             'Develop React/TypeScript dashboard features: live zone occupancy, staff attendance, alerts and reports.',
             'Built a camera zone editor (drag handles, undo, snapping), an entrance-line editor and a system status page.',
-            'Made the dashboard and the alert engine share one headcount; the live view query went from seconds to milliseconds.',
-            'Go backend features: Telegram alerts with rate limiting and retries, scheduled PDF reports, a server health watchdog.',
+            'The dashboard and the alerts counted people differently; I moved both to one calculation, and the live view now loads in milliseconds instead of seconds.',
+            'In Go: Telegram alerts that respect rate limits and retry on failure, scheduled PDF reports, server health monitoring.',
           ],
           stack: stacks.polyframe,
         },
@@ -160,7 +160,7 @@ export const content = {
         {
           name: 'Taom',
           tag: 'Own product · pre-launch · 2026',
-          description: 'Compares dish prices and delivery fees across food delivery services in Tashkent — in a Telegram bot, a Telegram Mini App and a web app.',
+          description: 'Shows where the same dish is cheaper to order in Tashkent by comparing prices and delivery fees across delivery services. Works as a Telegram bot, a Mini App and a website.',
           points: [
             'Next.js 15 / React 19 web app and a Telegram bot with a Mini App, in Russian, Uzbek and English.',
             'TypeScript backend: PostgreSQL, Redis + BullMQ background workers, Zod validation.',
@@ -173,7 +173,7 @@ export const content = {
         {
           name: "It's Done",
           tag: 'Tischerco · 2024–2025',
-          description: 'B2B platform where service companies manage their sites, file work reports and bill clients. I built the whole web client.',
+          description: 'B2B platform for service companies: sites, work reports and client invoices. I built its web app from scratch.',
           points: [
             'Work reports with photos and e-signatures; invoices and offers generated from reports, with VAT.',
             'Role-based access for admins, managers and employees; subscription plans.',
@@ -202,10 +202,10 @@ export const content = {
     approach: {
       title: 'How I work',
       items: [
-        { title: 'From requirement to release', text: 'I clarify the business goal first, split work into small releases and agree API contracts early with backend developers.' },
-        { title: 'Typed and tested', text: 'Strict TypeScript, Vitest and Playwright. Every fixed bug gets a regression test so it stays fixed.' },
-        { title: 'AI-assisted, human-reviewed', text: 'I use Claude Code every day: I plan the change, review every diff and keep CI checks as the gate.' },
-        { title: 'Production mindset', text: 'Health checks, alerts and honest “no data” states — users should never see a wrong number.' },
+        { title: 'Business goal first', text: 'Before coding I find out why the task matters, split it into small releases and agree on the API with backend developers early.' },
+        { title: 'TypeScript and tests', text: 'Strict TypeScript, Vitest and Playwright. When I fix a bug, I add a test so it does not come back.' },
+        { title: 'AI helps, I own the code', text: 'I use Claude Code every day, but I plan the change myself, read every diff and let CI checks catch mistakes.' },
+        { title: 'Thinking about production', text: 'Monitoring, alerts and an honest “no data” instead of a zero — users should never see a wrong number.' },
       ],
     },
     contact: {
@@ -223,16 +223,16 @@ export const content = {
       hello: 'Привет, я Хаммод',
       name: 'Хаммод Муборакшо',
       role: 'Frontend / Fullstack-разработчик',
-      lead: 'Делаю веб-продукты целиком: React и TypeScript на фронтенде, Node.js и Go на бэкенде. Сейчас — Fullstack-разработчик в Polyframe AI, стартапе AI-видеоаналитики.',
-      badges: ['5+ лет в веб-разработке', 'Ташкент · UTC+5', 'Удалённо, офис или релокация'],
+      lead: 'Пишу интерфейсы на React и TypeScript, а бэкенд — на Node.js и Go. С нуля сделал фронтенд B2B-платформы для немецкой компании, сейчас в Polyframe AI работаю над дашбордом и бэкендом системы видеоаналитики для магазинов и офисов.',
+      badges: ['Ташкент · UTC+5', 'Русский · English B2', 'Удалёнка, офис или переезд'],
       telegram: 'Написать в Telegram',
       photoAlt: 'Фото Хаммода Муборакшо',
     },
     facts: [
-      { value: '30+', label: 'экранов в веб-клиенте B2B-платформы, сделанном с нуля' },
-      { value: '50+', label: 'сайтов и веб-приложений для бизнеса' },
-      { value: '1900+', label: 'unit-тестов в собственном продукте' },
-      { value: '3', label: 'языка интерфейса: немецкий, английский, русский' },
+      { value: '5+ лет', label: 'в веб-разработке: 50+ проектов на фрилансе, потом продуктовые команды' },
+      { value: '30+', label: 'экранов в B2B-платформе для немецкой компании — её фронтенд я сделал с нуля' },
+      { value: 'сек → мс', label: 'так ускорил live-экран системы видеоаналитики' },
+      { value: '1900+', label: 'автотестов в моём продукте, запускаются в CI' },
     ],
     experience: {
       title: 'Опыт работы',
@@ -243,10 +243,10 @@ export const content = {
           dates: 'Апр 2026 – наст. время',
           context: 'AI-видеоаналитика для ритейла и офисов (стартап) · Ташкент',
           points: [
-            'Разрабатываю функции дашборда на React/TypeScript: заполненность зон в реальном времени, посещаемость сотрудников, алерты и отчёты.',
-            'Сделал редактор зон на кадре камеры (вершины, отмена, привязка), редактор линии входа и страницу статуса системы.',
-            'Свёл дашборд и движок алертов к одному подсчёту людей; live-экран ускорился с секунд до миллисекунд.',
-            'Бэкенд на Go: алерты в Telegram с ограничением частоты и повторами, PDF-отчёты по расписанию, watchdog сервера.',
+            'Развиваю дашборд на React и TypeScript: заполненность зон в реальном времени, посещаемость сотрудников, алерты и отчёты.',
+            'Сделал редактор зон прямо на кадре с камеры — с перетаскиванием вершин, отменой и привязкой, — а ещё редактор линии входа и страницу состояния системы.',
+            'Дашборд и алерты считали людей по-разному — свёл всё к одному расчёту, и live-экран стал открываться за миллисекунды вместо секунд.',
+            'На Go написал отправку алертов в Telegram с учётом лимитов и повторами, PDF-отчёты по расписанию и мониторинг состояния сервера.',
           ],
           stack: stacks.polyframe,
         },
@@ -256,10 +256,10 @@ export const content = {
           dates: 'Апр 2024 – дек 2025',
           context: '«It\'s Done» — B2B-платформа для сервисных компаний · удалённо',
           points: [
-            'С нуля сделал веб-клиент на 30+ экранов и отвечал за его архитектуру и стандарты кода.',
-            'Отчёты о работах с фото и электронной подписью, счета и предложения на основе отчётов с НДС, просмотр PDF.',
+            'С нуля сделал веб-приложение на 30+ экранов и отвечал за его архитектуру и качество кода.',
+            'Отчёты о выполненных работах с фото и электронной подписью, счета и коммерческие предложения с НДС, просмотр PDF прямо в приложении.',
             'Интеграция с REST API на Java Spring: JWT (access/refresh), экраны по ролям для администраторов, менеджеров и сотрудников.',
-            'Сложные формы, автодополнение адресов Google Maps, интерфейс на немецком, английском и русском.',
+            'Сложные формы с валидацией, поиск адресов через Google Maps, перевод интерфейса на немецкий, английский и русский.',
           ],
           stack: stacks.tischerco,
         },
@@ -294,7 +294,7 @@ export const content = {
         {
           name: 'Taom',
           tag: 'Свой продукт · до запуска · 2026',
-          description: 'Сравнивает цены на блюда и стоимость доставки в разных сервисах доставки еды в Ташкенте — в Telegram-боте, Mini App и веб-приложении.',
+          description: 'Показывает, где в Ташкенте дешевле заказать то же блюдо: сравнивает цены и доставку в разных сервисах. Работает как Telegram-бот, Mini App и сайт.',
           points: [
             'Веб-приложение на Next.js 15 / React 19 и Telegram-бот с Mini App на русском, узбекском и английском.',
             'Бэкенд на TypeScript: PostgreSQL, фоновые воркеры на Redis + BullMQ, валидация Zod.',
@@ -307,7 +307,7 @@ export const content = {
         {
           name: "It's Done",
           tag: 'Tischerco · 2024–2025',
-          description: 'B2B-платформа, где сервисные компании ведут объекты, сдают отчёты о работах и выставляют счета клиентам. Весь веб-клиент сделал я.',
+          description: 'B2B-платформа для сервисных компаний: объекты, отчёты о работах и счета клиентам. Веб-версию я сделал с нуля.',
           points: [
             'Отчёты о работах с фото и электронной подписью; счета и предложения на основе отчётов, с НДС.',
             'Доступ по ролям для администраторов, менеджеров и сотрудников; тарифные планы.',
@@ -336,10 +336,10 @@ export const content = {
     approach: {
       title: 'Как я работаю',
       items: [
-        { title: 'От требования до релиза', text: 'Сначала уточняю бизнес-цель, делю работу на небольшие релизы и заранее согласую контракты API с бэкендом.' },
-        { title: 'Типизировано и протестировано', text: 'Строгий TypeScript, Vitest и Playwright. На каждый исправленный баг — регрессионный тест, чтобы он не вернулся.' },
-        { title: 'AI помогает, человек проверяет', text: 'Каждый день работаю с Claude Code: сам планирую изменение, читаю каждый diff, а проверки CI остаются фильтром.' },
-        { title: 'Думаю о продакшене', text: 'Health-checks, алерты и честное «нет данных» — пользователь не должен видеть неверное число.' },
+        { title: 'Сначала цель бизнеса', text: 'Прежде чем писать код, выясняю, зачем нужна задача, делю её на небольшие релизы и заранее договариваюсь с бэкендом об API.' },
+        { title: 'TypeScript и тесты', text: 'Строгий TypeScript, Vitest и Playwright. Исправил баг — пишу на него тест, чтобы он не вернулся.' },
+        { title: 'AI помогает, отвечаю я', text: 'Каждый день работаю с Claude Code, но изменение планирую сам, читаю каждый diff, а ошибки ловят проверки в CI.' },
+        { title: 'Думаю о продакшене', text: 'Мониторинг, алерты и честное «нет данных» вместо нуля — пользователь не должен видеть неверную цифру.' },
       ],
     },
     contact: {

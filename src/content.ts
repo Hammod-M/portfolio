@@ -96,7 +96,6 @@ export const content = {
     nav: { experience: 'Experience', projects: 'Projects', skills: 'Skills', contact: 'Contact' },
     ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Русская версия', downloadCv: 'Download CV', cvMenu: 'Choose a CV' },
     hero: {
-      hello: "Hi, I'm Hammod",
       name: 'Hammod Muborakshoi',
       role: 'Frontend / Fullstack Developer',
       lead: 'I write interfaces in React and TypeScript and backends in Node.js and Go. I built the frontend of a German B2B platform from scratch, and now at Polyframe AI I work on the dashboard and backend of a video-analytics system for stores and offices.',
@@ -263,7 +262,6 @@ export const content = {
     nav: { experience: 'Опыт', projects: 'Проекты', skills: 'Навыки', contact: 'Контакты' },
     ui: { skip: 'Перейти к содержимому', theme: 'Сменить тему', language: 'English version', downloadCv: 'Скачать резюме', cvMenu: 'Выберите резюме' },
     hero: {
-      hello: 'Привет, я Хаммод',
       name: 'Хаммод Муборакшои',
       role: 'Frontend / Fullstack-разработчик',
       lead: 'Пишу интерфейсы на React и TypeScript, а бэкенд — на Node.js и Go. С нуля сделал фронтенд B2B-платформы для немецкой компании, сейчас в Polyframe AI работаю над дашбордом и бэкендом системы видеоаналитики для магазинов и офисов.',

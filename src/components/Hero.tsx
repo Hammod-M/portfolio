@@ -43,8 +43,7 @@ export default function Hero() {
 
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pt-14 pb-12 sm:px-6 md:grid-cols-[1.35fr_1fr] md:pt-24">
         <div className="fade-up">
-          <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">{t.hero.hello}</p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl dark:text-white">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl dark:text-white">
             {t.hero.name}
           </h1>
           <p className="mt-3 bg-linear-to-r from-indigo-500 to-cyan-500 bg-clip-text text-xl font-semibold text-transparent sm:text-2xl dark:from-indigo-400 dark:to-cyan-300">

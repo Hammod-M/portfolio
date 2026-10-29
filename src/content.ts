@@ -5,8 +5,8 @@ import bizan from './assets/works/bizan1.webp'
 import charismastom from './assets/works/charismastom.webp'
 import idanalytics from './assets/works/idanalytics.webp'
 import dm from './assets/works/dm1.webp'
-import expo from './assets/works/expo.webp'
-import alartech from './assets/works/alartech.webp'
+import autogood from './assets/works/autogood.webp'
+import gladtour from './assets/works/gladtour.webp'
 
 export type Locale = 'en' | 'ru'
 
@@ -49,18 +49,23 @@ export type Project = {
   points: string[]
   stack: string[]
   note?: string
+  links?: { label: string; href: string }[]
 }
 
 export type Work = { title: string; image: string; href?: string }
 
 const works = (titles: string[]): Work[] => [
-  { title: titles[0], image: bizan },
-  { title: titles[1], image: charismastom, href: 'https://charismastom.ru/' },
-  { title: titles[2], image: idanalytics },
-  { title: titles[3], image: dm },
-  { title: titles[4], image: expo },
-  { title: titles[5], image: alartech },
+  { title: titles[0], image: autogood, href: 'https://autogood.by/' },
+  { title: titles[1], image: gladtour, href: 'https://gladtour.ru/' },
+  { title: titles[2], image: charismastom },
+  { title: titles[3], image: bizan },
+  { title: titles[4], image: idanalytics },
+  { title: titles[5], image: dm },
 ]
+
+const REPO = 'https://github.com/Hammod-M'
+const pluginStack = ['PHP', 'JavaScript', 'WordPress', 'WooCommerce', 'Yandex Maps API']
+const helpsterStack = ['React', 'TypeScript', 'Vite', 'Redux Toolkit', 'Mantine', 'TipTap']
 
 const stacks = {
   polyframe: ['React 19', 'TypeScript', 'TanStack Query', 'Zustand', 'Tailwind CSS', 'Go', 'PostgreSQL', 'MQTT', 'WebSocket', 'Docker'],
@@ -84,9 +89,12 @@ const skillGroups = (names: string[], w: SkillWords) => [
 
 export const content = {
   en: {
-    meta: { title: 'Hammod Muborakshoi — Frontend / Fullstack Developer' },
+    meta: {
+      title: 'Hammod Muborakshoi — Frontend / Fullstack Developer',
+      description: 'Frontend / Fullstack developer from Tashkent: React, TypeScript, Node.js, Go. 5+ years in web development, ex-Frontend Lead Developer at Tischerco (Germany), now at Polyframe AI.',
+    },
     nav: { experience: 'Experience', projects: 'Projects', skills: 'Skills', contact: 'Contact' },
-    ui: { theme: 'Toggle color theme', language: 'Русская версия', downloadCv: 'Download CV', cvMenu: 'Choose a CV' },
+    ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Русская версия', downloadCv: 'Download CV', cvMenu: 'Choose a CV' },
     hero: {
       hello: "Hi, I'm Hammod",
       name: 'Hammod Muborakshoi',
@@ -184,15 +192,44 @@ export const content = {
           ],
           stack: stacks.itsdone,
         },
+        {
+          name: 'Woo Yandex Delivery Zones',
+          tag: 'Open source · WordPress plugin · 2025',
+          description: 'WooCommerce delivery pricing by zones that the store owner draws on Yandex Maps.',
+          points: [
+            'Visual zone editor in WP Admin: polygons, prices and colors; import from GeoJSON and InSales exports.',
+            'Checkout map with address search; the zone is checked on the server (point-in-polygon), so the client cannot set its own price.',
+            'Three shipping methods: courier by zone, pickup and courier with a minimum order amount.',
+          ],
+          stack: pluginStack,
+          links: [
+            { label: 'Code', href: `${REPO}/woo-yandex-delivery-zones` },
+            { label: 'Live demo', href: 'https://hammod-m.github.io/woo-yandex-delivery-zones/demo/' },
+          ],
+        },
+        {
+          name: 'Helpsterbot',
+          tag: 'AI web app · 2025',
+          description: 'Frontend of an AI assistant service: GPT chat, image and video generation, blog, pricing and admin panel.',
+          points: [
+            'Feature-Sliced structure: app, pages, features (auth, chat, blog, admin panel), shared UI kit and API client.',
+            'Blog with a rich-text editor (TipTap), registration and Telegram login, protected routes.',
+          ],
+          stack: helpsterStack,
+          links: [
+            { label: 'Code', href: `${REPO}/helpsterbot` },
+            { label: 'UI', href: 'https://hammod-m.github.io/helpsterbot/' },
+          ],
+        },
       ] satisfies Project[],
-      galleryTitle: 'Selected HM-TECH projects, 2020–2022',
+      galleryTitle: 'Selected client websites',
       works: works([
-        'Management reporting for business',
+        'Car import from the US, Europe and China (Minsk)',
+        'Sports training camps operator',
         'Dental clinic',
+        'Management reporting for business',
         'Marketplace sales analytics',
         'German cosmetics store',
-        'International marketing forum',
-        'Lifting equipment service',
       ]),
       liveSite: 'Live site',
     },
@@ -219,9 +256,12 @@ export const content = {
     footer: 'Built with React, TypeScript, Vite and Tailwind CSS.',
   },
   ru: {
-    meta: { title: 'Хаммод Муборакшои — Frontend / Fullstack-разработчик' },
+    meta: {
+      title: 'Хаммод Муборакшои — Frontend / Fullstack-разработчик',
+      description: 'Frontend / Fullstack-разработчик из Ташкента: React, TypeScript, Node.js, Go. 5+ лет в веб-разработке, был Frontend Lead Developer в Tischerco (Германия), сейчас в Polyframe AI.',
+    },
     nav: { experience: 'Опыт', projects: 'Проекты', skills: 'Навыки', contact: 'Контакты' },
-    ui: { theme: 'Сменить тему', language: 'English version', downloadCv: 'Скачать резюме', cvMenu: 'Выберите резюме' },
+    ui: { skip: 'Перейти к содержимому', theme: 'Сменить тему', language: 'English version', downloadCv: 'Скачать резюме', cvMenu: 'Выберите резюме' },
     hero: {
       hello: 'Привет, я Хаммод',
       name: 'Хаммод Муборакшои',
@@ -319,15 +359,44 @@ export const content = {
           ],
           stack: stacks.itsdone,
         },
+        {
+          name: 'Woo Yandex Delivery Zones',
+          tag: 'Open source · плагин WordPress · 2025',
+          description: 'Расчёт доставки в WooCommerce по зонам, которые владелец магазина рисует на Яндекс.Картах.',
+          points: [
+            'Визуальный редактор зон в админке: полигоны, цены и цвета; импорт из GeoJSON и выгрузки InSales.',
+            'Карта на оформлении заказа с поиском адреса; зона проверяется на сервере (point-in-polygon), поэтому клиент не может подменить цену.',
+            'Три способа доставки: курьер по зонам, самовывоз и курьер с минимальной суммой заказа.',
+          ],
+          stack: pluginStack,
+          links: [
+            { label: 'Код', href: `${REPO}/woo-yandex-delivery-zones` },
+            { label: 'Демо', href: 'https://hammod-m.github.io/woo-yandex-delivery-zones/demo/' },
+          ],
+        },
+        {
+          name: 'Helpsterbot',
+          tag: 'AI-веб-приложение · 2025',
+          description: 'Фронтенд AI-ассистента: чат с GPT, генерация изображений и видео, блог, тарифы и админ-панель.',
+          points: [
+            'Структура по Feature-Sliced: app, pages, features (авторизация, чат, блог, админ-панель), общий UI-кит и API-клиент.',
+            'Блог с редактором (TipTap), регистрация и вход через Telegram, защищённые маршруты.',
+          ],
+          stack: helpsterStack,
+          links: [
+            { label: 'Код', href: `${REPO}/helpsterbot` },
+            { label: 'Интерфейс', href: 'https://hammod-m.github.io/helpsterbot/' },
+          ],
+        },
       ] satisfies Project[],
-      galleryTitle: 'Избранные проекты HM-TECH, 2020–2022',
+      galleryTitle: 'Избранные сайты для клиентов',
       works: works([
-        'Управленческая отчётность для бизнеса',
+        'Авто из США, Европы и Китая (Минск)',
+        'Федеральный оператор спортивных сборов',
         'Стоматологическая клиника',
+        'Управленческая отчётность для бизнеса',
         'Аналитика продаж на маркетплейсах',
         'Магазин немецкой косметики',
-        'Международный форум по маркетингу',
-        'Обслуживание грузоподъёмного оборудования',
       ]),
       liveSite: 'Открыть сайт',
     },

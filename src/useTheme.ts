@@ -1,16 +1,24 @@
 import { useEffect, useState } from 'react'
 
+// The theme class is set on <html> by an inline script before React loads,
+// so the server render stays theme-neutral and the icon syncs after mount.
 export function useTheme() {
-  const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'))
+  const [dark, setDark] = useState(false)
 
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', dark)
+    setDark(document.documentElement.classList.contains('dark'))
+  }, [])
+
+  const toggle = () => {
+    const next = !document.documentElement.classList.contains('dark')
+    document.documentElement.classList.toggle('dark', next)
     try {
-      localStorage.setItem('theme', dark ? 'dark' : 'light')
+      localStorage.setItem('theme', next ? 'dark' : 'light')
     } catch {
       // not critical
     }
-  }, [dark])
+    setDark(next)
+  }
 
-  return { dark, toggle: () => setDark((value) => !value) }
+  return { dark, toggle }
 }

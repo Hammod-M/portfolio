@@ -1,14 +1,22 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import '@fontsource-variable/inter'
 import './index.css'
 import App from './App'
-import { LocaleProvider } from './i18n'
+import { LocaleProvider, localeFromPath, redirectToPreferredLocale } from './i18n'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <LocaleProvider>
-      <App />
-    </LocaleProvider>
-  </StrictMode>,
-)
+const locale = localeFromPath(window.location.pathname)
+
+if (!redirectToPreferredLocale(locale)) {
+  const root = document.getElementById('root')!
+  const app = (
+    <StrictMode>
+      <LocaleProvider initial={locale}>
+        <App />
+      </LocaleProvider>
+    </StrictMode>
+  )
+  // Production pages are prerendered; the dev server serves an empty root.
+  if (root.hasChildNodes()) hydrateRoot(root, app)
+  else createRoot(root).render(app)
+}

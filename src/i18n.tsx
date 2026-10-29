@@ -1,36 +1,51 @@
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { createContext, useContext, useMemo, type ReactNode } from 'react'
 import { content, type Content, type Locale } from './content'
 
-type LocaleContextValue = { locale: Locale; t: Content; setLocale: (locale: Locale) => void }
+type LocaleContextValue = { locale: Locale; t: Content }
 
 const LocaleContext = createContext<LocaleContextValue | null>(null)
 
-function initialLocale(): Locale {
-  const fromUrl = new URLSearchParams(window.location.search).get('lang')
-  if (fromUrl === 'en' || fromUrl === 'ru') return fromUrl
-  try {
-    const saved = localStorage.getItem('lang')
-    if (saved === 'en' || saved === 'ru') return saved
-  } catch {
-    // storage can be blocked; fall back to the browser language
-  }
-  return navigator.language.toLowerCase().startsWith('ru') ? 'ru' : 'en'
+const BASE = import.meta.env.BASE_URL
+
+// Each language is a separate prerendered page: /portfolio/ and /portfolio/ru/.
+export const LOCALE_PATH: Record<Locale, string> = { en: BASE, ru: `${BASE}ru/` }
+
+export function localeFromPath(pathname: string): Locale {
+  return pathname.startsWith(LOCALE_PATH.ru) ? 'ru' : 'en'
 }
 
-export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>(initialLocale)
+export function rememberLocale(locale: Locale) {
+  try {
+    localStorage.setItem('lang', locale)
+  } catch {
+    // storage can be blocked; not critical
+  }
+}
 
-  useEffect(() => {
-    document.documentElement.lang = locale
-    document.title = content[locale].meta.title
-    try {
-      localStorage.setItem('lang', locale)
-    } catch {
-      // not critical
-    }
-  }, [locale])
+// Sends visitors to the right language page before hydration. Returns true when navigating away.
+export function redirectToPreferredLocale(current: Locale): boolean {
+  const fromQuery = new URLSearchParams(window.location.search).get('lang')
+  let saved: string | null = null
+  try {
+    saved = localStorage.getItem('lang')
+  } catch {
+    // ignore
+  }
+  const wanted =
+    fromQuery === 'en' || fromQuery === 'ru'
+      ? fromQuery
+      : saved === 'en' || saved === 'ru'
+        ? saved
+        : current === 'en' && navigator.language.toLowerCase().startsWith('ru')
+          ? 'ru'
+          : current
+  if (wanted === current) return false
+  window.location.replace(LOCALE_PATH[wanted] + window.location.hash)
+  return true
+}
 
-  const value = useMemo(() => ({ locale, t: content[locale], setLocale }), [locale])
+export function LocaleProvider({ initial, children }: { initial: Locale; children: ReactNode }) {
+  const value = useMemo(() => ({ locale: initial, t: content[initial] }), [initial])
   return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>
 }
 

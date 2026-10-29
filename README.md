@@ -7,6 +7,8 @@ Personal site of a frontend / fullstack developer (React, TypeScript, Node.js, G
 ## Stack
 
 React 19 · TypeScript · Vite · Tailwind CSS 4 · self-hosted Inter font · no UI kit.
+
+Both language versions are prerendered to static HTML at build time (`src/entry-server.tsx` + `scripts/prerender.mjs`) and hydrated on the client, so search engines and link previews see the full content. Each page ships its own canonical URL, hreflang links, Open Graph tags and schema.org `Person` data; `sitemap.xml` and a custom `404.html` are included.
 All text lives in `src/content.ts` (EN/RU), so the site and the CV share the same facts.
 
 ## Scripts

@@ -22,6 +22,22 @@ export default function Projects() {
             {'note' in project && project.note && (
               <p className="mt-auto pt-5 text-sm text-zinc-500 dark:text-zinc-400">{project.note}</p>
             )}
+            {'links' in project && project.links && (
+              <div className="mt-auto flex flex-wrap gap-2 pt-5">
+                {project.links.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 rounded-full border border-zinc-200 px-3 py-1 text-sm font-medium text-indigo-600 transition hover:border-indigo-400 dark:border-white/10 dark:text-indigo-300 dark:hover:border-indigo-400"
+                  >
+                    {link.label}
+                    <Icon.ArrowUpRight />
+                  </a>
+                ))}
+              </div>
+            )}
           </Card>
         ))}
       </div>

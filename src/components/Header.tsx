@@ -1,43 +1,56 @@
+import { useLocale } from '../i18n'
+import { useTheme } from '../useTheme'
+import { Icon } from './ui'
+
 export default function Header() {
+  const { t, locale, setLocale } = useLocale()
+  const { dark, toggle } = useTheme()
+  const links = [
+    ['experience', t.nav.experience],
+    ['projects', t.nav.projects],
+    ['skills', t.nav.skills],
+    ['contact', t.nav.contact],
+  ] as const
+
   return (
-    <header className="header">
-      <div className="container mx-auto">
-        <div className="header__block mb-8 sm:mb-16 flex flex-col sm:flex-row flex-center justify-between items-center ">
-          <div className="logo mb-5 sm:mb-0">
-            <a href="/" className="logo__link">
-              <span className="logo__text text-6xl">{`}{/\\/\\`}</span>
+    <header className="sticky top-0 z-40 border-b border-zinc-200/70 bg-zinc-50/80 backdrop-blur-md dark:border-white/5 dark:bg-zinc-950/70">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+        <a href="#top" className="flex items-center gap-2.5 font-semibold tracking-tight text-zinc-900 dark:text-white">
+          <span className="grid h-8 w-8 place-items-center rounded-lg bg-linear-to-br from-indigo-500 to-cyan-400 text-xs font-bold text-white">
+            HM
+          </span>
+          <span className="hidden sm:inline">{t.hero.name}</span>
+        </a>
+
+        <nav aria-label="Main" className="hidden items-center gap-7 text-sm md:flex">
+          {links.map(([id, label]) => (
+            <a key={id} href={`#${id}`} className="text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">
+              {label}
             </a>
-          </div>
-          <div className="nav">
-            <div className="menu flex gap-3">
-              <li className="list-none">
-                <a
-                  href="#projects"
-                  className="no-underline text-lg text-black-200"
-                >
-                  Projects
-                </a>
-              </li>
-              <li className="list-none">
-                <a
-                  href="#about"
-                  className="no-underline text-lg text-black-200"
-                >
-                  About
-                </a>
-              </li>
-              <li className="list-none">
-                <a
-                  href="#reviews"
-                  className="no-underline text-lg text-black-200"
-                >
-                  Reviews
-                </a>
-              </li>
-            </div>
-          </div>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setLocale(locale === 'en' ? 'ru' : 'en')}
+            aria-label={t.ui.language}
+            title={t.ui.language}
+            className="h-9 rounded-full border border-zinc-300 px-3 text-xs font-semibold text-zinc-700 transition hover:border-zinc-400 dark:border-white/15 dark:text-zinc-300 dark:hover:border-white/30"
+          >
+            {locale === 'en' ? 'RU' : 'EN'}
+          </button>
+          <button
+            type="button"
+            onClick={toggle}
+            aria-label={t.ui.theme}
+            title={t.ui.theme}
+            className="grid h-9 w-9 place-items-center rounded-full border border-zinc-300 text-zinc-700 transition hover:border-zinc-400 dark:border-white/15 dark:text-zinc-300 dark:hover:border-white/30"
+          >
+            {dark ? <Icon.Sun /> : <Icon.Moon />}
+          </button>
         </div>
       </div>
     </header>
-  );
+  )
 }

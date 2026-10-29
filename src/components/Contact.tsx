@@ -16,6 +16,10 @@ export default function Contact() {
             <Icon.Telegram />
             Telegram
           </a>
+          <a href={LINKS.phone} className={buttonSecondary}>
+            <Icon.Phone />
+            {LINKS.phoneText}
+          </a>
           <a href={LINKS.email} className={buttonSecondary}>
             <Icon.Mail />
             {LINKS.emailText}

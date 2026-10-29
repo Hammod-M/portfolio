@@ -12,6 +12,8 @@ export type Locale = 'en' | 'ru'
 
 export const LINKS = {
   telegram: 'https://t.me/HaMMMMoD',
+  phone: 'tel:+998949140076',
+  phoneText: '+998 94 914 00 76',
   email: 'mailto:hammod.muborakshoi@gmail.com',
   emailText: 'hammod.muborakshoi@gmail.com',
   linkedin: 'https://www.linkedin.com/in/hammod-muborakshoi',
